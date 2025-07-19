@@ -6,13 +6,33 @@
     <!-- Load fonts style after rendering the layout styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-<!--
+    <!--
     
 TemplateMo 559 Zay Shop
 
 https://templatemo.com/tm-559-zay-shop
 
 -->
+    <style>
+        .product-card {
+            margin-bottom: 30px;
+        }
+        .card-img {
+            height: 300px;
+            object-fit: cover;
+        }
+        .product-overlay {
+            background-color: rgba(0, 0, 0, 0.3);
+            transition: opacity 0.3s;
+            opacity: 0;
+        }
+        .product-wap:hover .product-overlay {
+            opacity: 1;
+        }
+        .pagination .page-link {
+            border-radius: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -22,7 +42,7 @@ https://templatemo.com/tm-559-zay-shop
     <!-- Start Content -->
     <div class="container py-5">
         <div class="row">
-
+            <!-- Filtros laterales -->
             <div class="col-lg-3">
                 <h1 class="h2 pb-4">Categories</h1>
                 <ul class="list-unstyled templatemo-accordion">
@@ -59,9 +79,11 @@ https://templatemo.com/tm-559-zay-shop
                     </li>
                 </ul>
             </div>
-<!-- fin barra lateral de filtros -->
+            <!-- Fin barra lateral de filtros -->
+            
+            <!-- Contenido principal -->
             <div class="col-lg-9">
-            <!-- parte de arriba filtros -->
+                <!-- Filtros superiores -->
                 <div class="row">
                     <div class="col-md-6">
                         <ul class="list-inline shop-top-menu pb-3 pt-1">
@@ -76,7 +98,6 @@ https://templatemo.com/tm-559-zay-shop
                             </li>
                         </ul>
                     </div>
-                <!-- fin parte de arriba filtros -->
                     <div class="col-md-6 pb-4">
                         <div class="d-flex">
                             <select class="form-control">
@@ -87,93 +108,135 @@ https://templatemo.com/tm-559-zay-shop
                         </div>
                     </div>
                 </div>
-            <!--fin de barra desplegable filtros orden-->
-        <!--inicio cuadros ventas-->
-                <!--primer cuadro-->    
-<div class="row">
-    <div class="col-md-4">
-        <div class="card mb-4 product-wap rounded-0">
-            <div class="card rounded-0">
-                <img class="card-img rounded-0 img-fluid" src="assets/img/Imagenesweb/Imagen1.jpeg" style="max-width:200px; max-height:200px;">
-                <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                    <ul class="list-unstyled">
-                        <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
-                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
-                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="card-body">
-                <a href="shop-single.html" class="h3 text-decoration-none">La vida invisible de Addie larue</a>
-                <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                    <li>Una novela sobre el amor, el arte y la lucha por dejar la huella</li>
-                    <li class="pt-2">
-                        <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                        <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                        <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                        <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                        <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                    </li>
-                </ul>
-                <ul class="list-unstyled d-flex justify-content-center mb-1">
-                    <li>
-                        <i class="text-warning fa fa-star"></i>
-                        <i class="text-warning fa fa-star"></i>
-                        <i class="text-warning fa fa-star"></i>
-                        <i class="text-muted fa fa-star"></i>
-                        <i class="text-muted fa fa-star"></i>
-                    </li>
-                </ul>
-                <p class="text-center mb-0">$86.000 COP</p>
-            </div>
-        </div>
-    </div>
+                <!-- Fin de filtros superiores -->
+                
+                <!-- Productos organizados en filas de 3 -->
+                <div class="row">
+                    <!-- Producto 1 -->
+                    <div class="col-md-4 product-card">
+                        <div class="card mb-4 product-wap rounded-0">
+                            <div class="card rounded-0">
+                                <img class="card-img rounded-0 img-fluid" src="assets/img/Imagen1.jpeg">
+                                <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                    <ul class="list-unstyled">
+                                        <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <a href="shop-single.html" class="h3 text-decoration-none">La vida invisible de Addie larue</a>
+                                <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                                    <li>Una novela sobre el amor, el arte y la lucha por dejar la huella</li>
+                                    <li class="pt-2">
+                                        <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                        <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                        <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                        <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                        <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled d-flex justify-content-center mb-1">
+                                    <li>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-muted fa fa-star"></i>
+                                    </li>
+                                </ul>
+                                <p class="text-center mb-0">$86.000 COP</p>
+                            </div>
+                        </div>
+                    </div>
 
-    <!--segundo cuadro-->
-    <div class="col-md-4">
-        <div class="card mb-4 product-wap rounded-0">
-            <div class="card rounded-0">
-                <img class="card-img rounded-0 img-fluid" src="assets/img/Imagenesweb/Imagen2.jpeg" style="max-width:200px; max-height:200px;">
-                <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                    <ul class="list-unstyled">
-                        <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
-                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
-                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="card-body">
-                <a href="shop-single.html" class="h3 text-decoration-none">Oupidatat non</a>
-                <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                    <li>M/L/X/XL</li>
-                    <li class="pt-2">
-                        <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                        <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                        <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                        <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                        <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                    </li>
-                </ul>
-                <ul class="list-unstyled d-flex justify-content-center mb-1">
-                    <li>
-                        <i class="text-warning fa fa-star"></i>
-                        <i class="text-warning fa fa-star"></i>
-                        <i class="text-warning fa fa-star"></i>
-                        <i class="text-muted fa fa-star"></i>
-                        <i class="text-muted fa fa-star"></i>
-                    </li>
-                </ul>
-                <p class="text-center mb-0">$250.00</p>
-            </div>
-        </div>
-    </div>
-</div>
+                    <!-- Producto 2 -->
+                    <div class="col-md-4 product-card">
+                        <div class="card mb-4 product-wap rounded-0">
+                            <div class="card rounded-0">
+                                <img class="card-img rounded-0 img-fluid" src="assets/img/Imagen2.jpeg">
+                                <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                    <ul class="list-unstyled">
+                                        <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <a href="shop-single.html" class="h3 text-decoration-none">Cuadro decorativo</a>
+                                <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                                    <li>Cuadro con pintura acrilica de 30cmx40cm</li>
+                                    <li class="pt-2">
+                                        <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                        <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                        <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                        <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                        <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled d-flex justify-content-center mb-1">
+                                    <li>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-muted fa fa-star"></i>
+                                        <i class="text-muted fa fa-star"></i>
+                                        <i class="text-muted fa fa-star"></i>
+                                    </li>
+                                </ul>
+                                <p class="text-center mb-0">$5.000</p>
+                            </div>
+                        </div>
+                    </div>
 
-                    <!--tercer cuadro-->
-                    <div class="col-md-4">
+                    <!-- Producto 3 -->
+                    <div class="col-md-4 product-card">
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
-                                <img class="card-img rounded-0 img-fluid" src="assets/img/Imagenesweb/Imagen3.jpeg">
+                                <img class="card-img rounded-0 img-fluid" src="assets/img/Imagen3.jpeg">
+                                <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                    <ul class="list-unstyled">
+                                        <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <a href="shop-single.html" class="h3 text-decoration-none">Camisa Incerum</a>
+                                <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                                    <li>Parte superior incerum negro hombre</li>
+                                    <li class="pt-2">
+                                        <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                        <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                        <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                        <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                        <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled d-flex justify-content-center mb-1">
+                                    <li>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-muted fa fa-star"></i>
+                                    </li>
+                                </ul>
+                                <p class="text-center mb-0">$90.000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- Fin de primera fila -->
+
+                <!-- Segunda fila de productos -->
+                <div class="row">
+                    <!-- Producto 4 -->
+                    <div class="col-md-4 product-card">
+                        <div class="card mb-4 product-wap rounded-0">
+                            <div class="card rounded-0">
+                                <img class="card-img rounded-0 img-fluid" src="assets/img/Imagen4.jpeg">
                                 <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul class="list-unstyled">
                                         <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
@@ -207,11 +270,12 @@ https://templatemo.com/tm-559-zay-shop
                             </div>
                         </div>
                     </div>
-                    <!--cuarto cuadro-->
-                    <div class="col-md-4">
+
+                    <!-- Producto 5 -->
+                    <div class="col-md-4 product-card">
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
-                                <img class="card-img rounded-0 img-fluid" src="assets/img/Imagenesweb/Imagen4.jpeg">
+                                <img class="card-img rounded-0 img-fluid" src="assets/img/Imagen5.jpeg">
                                 <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul class="list-unstyled">
                                         <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
@@ -245,10 +309,12 @@ https://templatemo.com/tm-559-zay-shop
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+
+                    <!-- Producto 6 -->
+                    <div class="col-md-4 product-card">
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
-                                <img class="card-img rounded-0 img-fluid" src="assets/img/Imagenesweb/Imagen4.jpeg">
+                                <img class="card-img rounded-0 img-fluid" src="assets/img/Imagen6.jpeg">
                                 <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul class="list-unstyled">
                                         <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
@@ -282,71 +348,33 @@ https://templatemo.com/tm-559-zay-shop
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card mb-4 product-wap rounded-0">
-                            <div class="card rounded-0">
-                                <img class="card-img rounded-0 img-fluid" src="assets/img/Imagenesweb/Imagen4.jpeg">
-                                <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                    <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Oupidatat non</a>
-                                <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                    <li>M/L/X/XL</li>
-                                    <li class="pt-2">
-                                        <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                                    </li>
-                                </ul>
-                                <ul class="list-unstyled d-flex justify-content-center mb-1">
-                                    <li>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
-                                    </li>
-                                </ul>
-                                <p class="text-center mb-0">$250.00</p>
-                            </div>
-                        </div>
+                </div> <!-- Fin de segunda fila -->
+
+                <!-- Paginación -->
+                <div class="row">
+                    <div class="col-12">
+                        <ul class="pagination pagination-lg justify-content-end">
+                            <li class="page-item disabled">
+                                <a class="page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0" href="#" tabindex="-1">1</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link rounded-0 mr-3 shadow-sm border-top-0 border-left-0 text-dark" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link rounded-0 shadow-sm border-top-0 border-left-0 text-dark" href="#">3</a>
+                            </li>
+                        </ul>
                     </div>
-                </div>
-                <!--buscador cuadro-->
-                <div div="row">
-                    <ul class="pagination pagination-lg justify-content-end">
-                        <li class="page-item disabled">
-                            <a class="page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0" href="#" tabindex="-1">1</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link rounded-0 mr-3 shadow-sm border-top-0 border-left-0 text-dark" href="#">2</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link rounded-0 shadow-sm border-top-0 border-left-0 text-dark" href="#">3</a>
-                        </li>
-                    </ul>
                 </div>
             </div>
-
         </div>
     </div>
     <!-- End Content -->
-
-    
 
     <!-- Start Footer -->
     <footer class="bg-dark" id="tempaltemo_footer">
         <div class="container">
             <div class="row">
-
                 <div class="col-md-4 pt-5">
                     <h2 class="h2 text-success border-bottom pb-3 border-light logo">Zay Shop</h2>
                     <ul class="list-unstyled text-light footer-link-list">
@@ -388,7 +416,6 @@ https://templatemo.com/tm-559-zay-shop
                         <li><a class="text-decoration-none" href="#">Contact</a></li>
                     </ul>
                 </div>
-
             </div>
 
             <div class="row text-light mb-4">
@@ -426,14 +453,13 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="row pt-2">
                     <div class="col-12">
                         <p class="text-left text-light">
-                            Copyright &copy; 2021 Company Name 
+                            Copyright &copy; 2021 Company Name
                             | Designed by <a rel="sponsored" href="https://templatemo.com" target="_blank">TemplateMo</a>
                         </p>
                     </div>
                 </div>
             </div>
         </div>
-
     </footer>
     <!-- End Footer -->
 
@@ -445,5 +471,4 @@ https://templatemo.com/tm-559-zay-shop
     <script src="assets/js/custom.js"></script>
     <!-- End Script -->
 </body>
-
 </html>
